@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura Smart Home Assistant</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Overlay -->
+    <div class="login-overlay" id="login-overlay">
+        <div class="login-card">
+            <div class="login-logo">
+                <div class="logo-icon-auth"></div>
+                <h2 class="logo-text-auth">AURA SYSTEM AUTHENTICATION</h2>
+            </div>
+            <p class="login-subtitle">Access Smart Assistant & Home Intelligence Control</p>
+            
+            <!-- Login Form Section -->
+            <div class="auth-view" id="login-view">
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user"></i>
+                            <input type="text" id="username" placeholder="Enter username (admin)" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="lock"></i>
+                            <input type="password" id="password" placeholder="Enter password (password123)" autocomplete="current-password" required>
+                        </div>
+                    </div>
+                    <div class="error-msg" id="login-error-msg"></div>
+                    <button type="submit" class="login-btn" id="login-submit-btn">
+                        <span>Log In</span>
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </form>
+                <div class="auth-toggle">
+                    Don't have an account? <a href="#" id="to-signup-btn">Sign Up</a>
+                </div>
+            </div>
+
+            <!-- Sign Up Form Section -->
+            <div class="auth-view hidden" id="signup-view">
+                <form id="signup-form">
+                    <div class="input-group">
+                        <label for="signup-name">Full Name</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="smile"></i>
+                            <input type="text" id="signup-name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-email">Email Address</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="mail"></i>
+                            <input type="email" id="signup-email" placeholder="Enter your email address" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-username">Username</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="user"></i>
+                            <input type="text" id="signup-username" placeholder="Choose a username" autocomplete="username" required>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="signup-password">Password</label>
+                        <div class="input-wrapper">
+                            <i data-lucide="lock"></i>
+                            <input type="password" id="signup-password" placeholder="Create a strong password" autocomplete="new-password" required>
+                        </div>
+                    </div>
+                    <div class="error-msg" id="signup-error-msg"></div>
+                    <button type="submit" class="login-btn" id="signup-submit-btn">
+                        <span>Create Account</span>
+                        <i data-lucide="user-plus"></i>
+                    </button>
+                </form>
+                <div class="auth-toggle">
+                    Already have an account? <a href="#" id="to-login-btn">Log In</a>
+                </div>
+            </div>
+
+            <div class="login-footer">
+                Demo Credentials: <strong>admin</strong> / <strong>password123</strong>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">AURA</span>
+                </div>
+                <button class="icon-btn mobile-close" id="mobile-close-btn">
+                    <i data-lucide="x"></i>
+                </button>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <div class="nav-section-title">FAQ Categories</div>
+                <ul>
+                    <li>
+                        <button class="nav-item active" data-category="All">
+                            <i data-lucide="message-square"></i>
+                            <span>All FAQs</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-category="Setup">
+                            <i data-lucide="settings"></i>
+                            <span>Hub Setup</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-category="Devices">
+                            <i data-lucide="cpu"></i>
+                            <span>Device Pairing</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-category="Automation">
+                            <i data-lucide="zap"></i>
+                            <span>Automation</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-item" data-category="Troubleshooting">
+                            <i data-lucide="alert-triangle"></i>
+                            <span>Troubleshooting</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-status-card">
+                <div class="status-header" id="status-header" style="cursor: pointer;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <span class="status-title">System Status</span>
+                        <span class="pulse-indicator online"></span>
+                    </div>
+                    <button class="icon-btn collapse-btn" id="status-collapse-btn" style="padding: 2px;">
+                        <i data-lucide="chevron-down"></i>
+                    </button>
+                </div>
+                <div class="status-metrics" id="status-metrics">
+                    <div class="metric">
+                        <span class="metric-label">Hub Status</span>
+                        <span class="metric-value text-online">Online</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Connected Devices</span>
+                        <span class="metric-value">15 Active</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Protocols</span>
+                        <span class="metric-value text-accent">Matter / Zigbee</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- User Profile Card -->
+            <div class="sidebar-profile" id="sidebar-profile">
+                <div class="profile-avatar">
+                    <i data-lucide="user"></i>
+                </div>
+                <div class="profile-info">
+                    <span class="profile-name" id="user-display-name">Administrator</span>
+                    <span class="profile-email" id="user-display-email">admin@aura.io</span>
+                </div>
+                <button class="icon-btn logout-btn" id="logout-btn" title="Log Out">
+                    <i data-lucide="log-out"></i>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="chat-area">
+            <!-- Active Chat View Panel -->
+            <div class="chat-view-container" id="chat-view-container">
+                <header class="chat-header">
+                    <div class="header-left">
+                        <button class="icon-btn sidebar-toggle" id="sidebar-toggle-btn">
+                            <i data-lucide="menu"></i>
+                        </button>
+                        <div class="assistant-info">
+                            <div class="avatar">
+                                <div class="avatar-glow"></div>
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <div>
+                                <h1 class="assistant-name">Aura Assistant</h1>
+                                <div class="assistant-status">
+                                    <span class="pulse-indicator online"></span>
+                                    <span>Support Bot • Ready to help</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn-text" id="clear-chat-btn">
+                            <i data-lucide="trash-2"></i>
+                            <span>Clear Chat</span>
+                        </button>
+                    </div>
+                </header>
+
+                <!-- Messages Window -->
+                <div class="messages-container" id="messages-container">
+                    <!-- Messages will be dynamically rendered here -->
+                </div>
+
+                <!-- FAQ Suggestions (Chips) -->
+                <div class="suggestions-container" id="suggestions-container">
+                    <!-- Suggestions will be dynamically rendered here -->
+                </div>
+
+                <!-- Input Bar -->
+                <footer class="chat-input-container">
+                    <form class="chat-input-form" id="chat-input-form">
+                        <input 
+                            type="text" 
+                            id="user-input" 
+                            placeholder="Ask about Aura setup, offline devices, automations..." 
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" class="send-btn" id="send-button" title="Send Message">
+                            <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                    <div class="footer-note">
+                        Aura AI matches your questions with standard FAQs using NLP vector similarity matching.
+                    </div>
+                </footer>
+            </div>
+
+            <!-- Dedicated FAQ Explorer View Panel -->
+            <div class="faq-explorer-container hidden" id="faq-explorer-container">
+                <header class="chat-header">
+                    <div class="header-left">
+                        <button class="icon-btn sidebar-toggle" id="faq-sidebar-toggle-btn">
+                            <i data-lucide="menu"></i>
+                        </button>
+                        <div class="explorer-title-info">
+                            <h2 class="explorer-category-title" id="explorer-category-title">Setup FAQs</h2>
+                            <p class="explorer-subtitle">Browse standard documentation answers</p>
+                        </div>
+                    </div>
+                    <div class="header-actions">
+                        <button class="action-btn-text" id="back-to-chat-btn">
+                            <i data-lucide="message-square"></i>
+                            <span>Back to Chat</span>
+                        </button>
+                    </div>
+                </header>
+
+                <div class="faq-grid-container" id="faq-grid-container">
+                    <!-- FAQ Cards will be dynamically rendered here -->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

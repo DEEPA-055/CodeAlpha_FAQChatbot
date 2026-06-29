@@ -1,0 +1,17 @@
+{
+  "admin": {
+    "name": "Administrator",
+    "email": "admin@aura.io",
+    "password": "password123"
+  },
+  "janetester": {
+    "name": "Jane Tester Duplicate",
+    "email": "jane2@tester.com",
+    "password": "testing123"
+  },
+  "deepachaudhary2000@gmail.com": {
+    "name": "Deepa",
+    "email": "deepachaudhary2000@gmail.com",
+    "password": "password123"
+  }
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "question": "What is Aura Smart Home?",
+    "answer": "Aura Smart Home is an advanced, AI-powered home automation ecosystem that integrates lighting, climate, security, and entertainment devices into a single, seamless system controlled via the Aura Hub, mobile app, or voice assistants.",
+    "category": "General",
+    "tags": ["about", "aura", "ecosystem", "overview"]
+  },
+  {
+    "id": 2,
+    "question": "How do I set up my Aura Hub?",
+    "answer": "To set up your Aura Hub: 1. Plug the Hub into a power outlet. 2. Connect it to your internet router using the provided Ethernet cable. 3. Download the Aura Home app on your iOS or Android device. 4. Open the app, sign up or log in, and select 'Add Hub' from the menu. 5. Follow the on-screen instructions to complete registration.",
+    "category": "Setup",
+    "tags": ["setup", "hub", "installation", "get started"]
+  },
+  {
+    "id": 3,
+    "question": "How do I connect a new smart device to Aura?",
+    "answer": "Open the Aura Home app, navigate to the 'Devices' tab, and tap the '+' (Add Device) button. Select your device type from the list or scan the QR code on the device. Ensure your device is in pairing mode (indicated by a flashing LED) and follow the simple on-screen prompt to pair it.",
+    "category": "Devices",
+    "tags": ["connect", "pair", "add device", "new device"]
+  },
+  {
+    "id": 4,
+    "question": "What should I do if a device shows as 'Offline'?",
+    "answer": "If a device is offline: 1. Ensure the device is powered on. 2. Check your internet connection and verify that your Aura Hub is online. 3. Move the device closer to the Aura Hub to rule out range issues. 4. Power-cycle the device by unplugging it for 10 seconds and plugging it back in. 5. If it remains offline, try deleting and re-pairing the device in the app.",
+    "category": "Troubleshooting",
+    "tags": ["offline", "troubleshooting", "connection issue", "disconnected"]
+  },
+  {
+    "id": 5,
+    "question": "Can I control Aura devices using voice assistants like Google Home or Alexa?",
+    "answer": "Yes! Aura is fully compatible with Amazon Alexa, Google Assistant, and Apple HomeKit. To link them, open the Alexa or Google Home app, search for the 'Aura Home' skill, select link account, and log in with your Aura credentials. Once linked, you can control your devices using voice commands.",
+    "category": "Integration",
+    "tags": ["voice assistant", "alexa", "google home", "apple homekit", "integration"]
+  },
+  {
+    "id": 6,
+    "question": "How do I create a custom automation routine?",
+    "answer": "To create a routine: 1. Open the Aura Home app and go to the 'Automation' tab. 2. Tap '+' to create a new Routine. 3. Define a Trigger (e.g., 'At 7:00 AM' or 'When Motion is Detected'). 4. Choose an Action (e.g., 'Turn on Kitchen Lights' or 'Set Thermostat to 72°F'). 5. Save the Routine and give it a name (e.g., 'Good Morning').",
+    "category": "Automation",
+    "tags": ["automation", "routine", "schedule", "trigger", "action"]
+  },
+  {
+    "id": 7,
+    "question": "Is my data secure with Aura?",
+    "answer": "Security is our top priority. Aura uses industry-standard AES 256-bit encryption for all local communication between the Hub and devices, and TLS 1.3 encryption for cloud data transmission. Your personal data and video recordings are stored securely, and we never sell your data to third parties.",
+    "category": "Security",
+    "tags": ["security", "data privacy", "encryption", "safe"]
+  },
+  {
+    "id": 8,
+    "question": "How do I reset the Aura Hub to factory settings?",
+    "answer": "To factory reset your Aura Hub, locate the pinhole reset button on the back of the device. Using a paperclip or SIM eject tool, press and hold the button for 15 seconds. The LED ring will flash yellow and then turn red. Release the button, and wait 5 minutes for the hub to reboot with default factory settings. Note: This clears all device pairings.",
+    "category": "Troubleshooting",
+    "tags": ["factory reset", "reset hub", "clear settings", "restore"]
+  },
+  {
+    "id": 9,
+    "question": "Does Aura work without an internet connection?",
+    "answer": "Yes, Aura supports local execution. Your configured smart routines, schedules, and local device controls (like switches and sensors) will continue to function normally without an internet connection. However, remote control via the app when away from home, voice assistant integrations, and firmware updates require an active internet connection.",
+    "category": "General",
+    "tags": ["offline mode", "no internet", "local execution", "wifi down"]
+  },
+  {
+    "id": 10,
+    "question": "What is the range of the Aura Hub?",
+    "answer": "The Aura Hub has a wireless range of up to 150 feet (45 meters) indoors and up to 300 feet outdoors in open space. The range can be extended by adding mains-powered Zigbee or Z-Wave devices (such as smart plugs or light switches) which automatically act as signal repeaters in the mesh network.",
+    "category": "General",
+    "tags": ["range", "distance", "coverage", "signal repeater", "mesh network"]
+  },
+  {
+    "id": 11,
+    "question": "How do I share access with family members?",
+    "answer": "To share access: 1. In the Aura Home app, open 'Settings' and select 'Family & Guests'. 2. Tap 'Invite User'. 3. Enter their email address and select their permission level (Admin, Member, or Guest). 4. Send the invitation. The recipient will receive an email to download the app and join your home ecosystem.",
+    "category": "General",
+    "tags": ["share access", "family access", "invite", "permissions", "guest"]
+  },
+  {
+    "id": 12,
+    "question": "Can I use Aura on multiple mobile devices?",
+    "answer": "Absolutely! You can install the Aura Home app on as many mobile phones and tablets (iOS and Android) as you like. Log in with your same credentials or invite family members to use their own accounts. State transitions and device statuses synchronize instantly across all connected screens.",
+    "category": "General",
+    "tags": ["multiple devices", "phones", "ipad", "sync", "login"]
+  },
+  {
+    "id": 13,
+    "question": "What smart home protocols does Aura support?",
+    "answer": "The Aura Hub features multi-protocol hardware supporting Zigbee 3.0, Z-Wave Plus, BLE (Bluetooth Low Energy), Wi-Fi (2.4GHz and 5GHz), and the new unified Matter over Thread standard. This allows you to connect thousands of third-party devices from popular brands.",
+    "category": "Devices",
+    "tags": ["protocols", "zigbee", "z-wave", "matter", "thread", "bluetooth", "compatibility"]
+  },
+  {
+    "id": 14,
+    "question": "What are Aura Smart Routines?",
+    "answer": "Smart Routines are custom automations that run automatically based on events. Aura uses on-device machine learning to suggest Routines based on your daily habits—such as auto-lowering the blinds when you turn on the TV, or adjusting temperatures when you leave for work.",
+    "category": "Automation",
+    "tags": ["routines", "smart", "machine learning", "automation suggestions"]
+  },
+  {
+    "id": 15,
+    "question": "How do I update my Aura device firmware?",
+    "answer": "Firmware updates are checked automatically in the background. If an update is available, you will receive a notification in the Aura Home app. You can also manually check by going to Settings > Device Updates and selecting 'Check for Updates'. Updates take 2-5 minutes and install without deleting your settings.",
+    "category": "General",
+    "tags": ["update", "firmware", "software update", "upgrade"]
+  }
+]
